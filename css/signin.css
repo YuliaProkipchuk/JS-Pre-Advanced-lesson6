@@ -1,0 +1,32 @@
+@import url(styles.css);
+*{
+    overflow: hidden;
+}
+div{
+    margin-bottom: 30px;
+}
+.sign{
+    justify-content: center;
+    height: 275px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    width: 100vw;
+}
+
+button{
+    width: 400px;
+    height: 40px;
+    background-color: rgb(30, 162, 81);
+    border: none;
+    color: white;
+}
+a{
+    text-decoration: none;
+    color: white;
+    
+}

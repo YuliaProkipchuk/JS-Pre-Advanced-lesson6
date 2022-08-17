@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/page.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="user_page">
+        <div class="user_info">
+            <img src="images/man5-512.webp" alt="">
+            <span class="userName">name</span>
+            <span class="userEmail">email</span>
+            <span class="job">Designer and Web Developing</span>
+            <p class="line"></p>
+        </div>
+
+        <button class="signup"> Sign Up</button>
+    </div>
+    <script>
+        if (localStorage.length) {
+            let activeUser = JSON.parse(localStorage.getItem('active_user'));
+            document.querySelector('.userName').textContent = activeUser.first_name + ' ' + activeUser.last_name;
+            document.querySelector('.userEmail').textContent = activeUser.email;
+        }
+
+        document.querySelector('.signup').addEventListener('click', () => {
+            window.open('./signin.html', '_self');
+
+        })
+    </script>
+</body>
+
+</html>
